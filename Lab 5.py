@@ -1,7 +1,6 @@
 Name= "Ali Sina"
 print("My name is",Name)
 
-
 a=20
 b=5
 print("addition",a+b)
@@ -11,7 +10,7 @@ print("division", a/b)
 
 x,y=10,5
 x,y=y,x
-print ("x=",x,"y=",y)
+print ("after swapping: x=",x,"y=",y)
 
 
 pi=3.14
