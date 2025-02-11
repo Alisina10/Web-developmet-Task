@@ -27,3 +27,25 @@ def sumall (**nums):
    for num, value in nums.items():
        print (f"{num} : {value}")
 sumall(name = "ali", age = 20, gender = "male", location = "egypt")
+
+try:
+    x = int (input("Enter a number:"))
+    print (10/x)
+except ZeroDivisionError:
+    print ("division by zero")
+except ValueError:
+    print ("invalid input")
+else:
+    print ( "Thanks for working with me", x)
+
+
+    def withdraw(balance, amount):
+        if amount > balance:
+            raise ValueError("insufficient balance.")
+        return balance - amount
+
+
+    try:
+        new_balance = withdraw(1000, 500)
+    except ValueError as e:
+        print(f"error:{e}")
