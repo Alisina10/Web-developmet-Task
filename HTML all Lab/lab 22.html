@@ -1,0 +1,175 @@
+// lab 1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1: Creating Different Types of Lists</title>
+</head>
+<body>
+    <h1>Lists in HTML</h1>
+
+    <h2>Ordered List: Favorite Programming Languages</h2>
+    <ol>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>C++</li>
+    </ol>
+
+    <h2>Unordered List: Favorite Websites</h2>
+    <ul>
+        <li>Google</li>
+        <li>GitHub</li>
+        <li>Stack Overflow</li>
+    </ul>
+
+    <h2>Nested List: Frontend and Backend Technologies</h2>
+    <ul>
+        <li>Frontend
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </li>
+        <li>Backend
+            <ul>
+                <li>Node.js</li>
+                <li>Python (Django, Flask)</li>
+                <li>Ruby on Rails</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Description List: Common HTML Elements</h2>
+    <dl>
+        <dt>&lt;p&gt;</dt>
+        <dd>Defines a paragraph.</dd>
+        <dt>&lt;a&gt;</dt>
+        <dd>Defines a hyperlink.</dd>
+        <dt>&lt;img&gt;</dt>
+        <dd>Embeds an image in the document.</dd>
+    </dl>
+</body>
+</html>
+
+// lab 2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2: Creating a Simple Table</title>
+</head>
+<body>
+    <h1>Programming Enthusiasts</h1>
+
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Favorite Programming Language</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>25</td>
+            <td>Python</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>30</td>
+            <td>JavaScript</td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td>22</td>
+            <td>C++</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+// lab 3
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3: Combining Cells Using rowspan and colspan</title>
+</head>
+<body>
+    <h1>Table with Merged Cells</h1>
+
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th colspan="3">Employee Information</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Role</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Alice</td>
+            <td>IT</td>
+            <td>Developer</td>
+        </tr>
+        <tr>
+            <td>HR</td>
+            <td>Recruiter</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td colspan="2">Project Manager</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+// lab 4
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4: Creating a List & Table Together</title>
+</head>
+<body>
+    <h1>My Favorite Movies</h1>
+
+    <h2>Movie List</h2>
+    <ul>
+        <li>Inception</li>
+        <li>The Dark Knight</li>
+        <li>Interstellar</li>
+    </ul>
+
+    <h2>Movie Details</h2>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Movie</th>
+            <th>Release Year</th>
+            <th>Genre</th>
+        </tr>
+        <tr>
+            <td>Inception</td>
+            <td>2010</td>
+            <td>Science Fiction</td>
+        </tr>
+        <tr>
+            <td>The Dark Knight</td>
+            <td>2008</td>
+            <td>Action/Thriller</td>
+        </tr>
+        <tr>
+            <td>Interstellar</td>
+            <td>2014</td>
+            <td>Science Fiction</td>
+        </tr>
+    </table>
+</body>
+</html>
