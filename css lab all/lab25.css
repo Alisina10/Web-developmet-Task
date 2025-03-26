@@ -1,0 +1,60 @@
+/* lab1 */
+
+body {
+background-color: lightblue;
+}
+
+/* lab2 */
+
+p {
+  font-size: 18px;
+  color: green;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+#main-title {
+  color: blue;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* lab3 */
+
+.color-name {
+  color: red;
+}
+
+.hex-color {
+  background-color: #ff5733;
+  color: white;
+}
+
+.rgb-color {
+  color: rgb(0, 0, 255);
+}
+
+.rgba-color {
+  background-color: rgba(0, 255, 0, 0.5);
+  padding: 10px;
+}
+
+/* lab4*/
+
+p {
+  font-size: 18px;
+  color: darkgreen;
+}
+
+.special-text {
+  background-color: lightblue;
+  font-weight: bold;
+}
+
+#page-title {
+  color: darkred;
+}
+
