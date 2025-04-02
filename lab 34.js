@@ -70,6 +70,7 @@ switch (day) {
     console.log("It's a regular day.");
 }
 
+
 // lab 6
 
 let num = 7;

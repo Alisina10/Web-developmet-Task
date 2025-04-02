@@ -25,11 +25,13 @@ console.log ("Is student:", isStudent, "-typy;", typeof score);
 console.log ("score:", score, "-typy;", typeof score);
 console.log ("address:", address, "-typy;", typeof address);
 
+
 // lab 3
 
 let userName = prompt ("Enter your name");
 let userAge = prompt ("Enter your age");
 
 alert ("Hello", + userName + "! you are " + userAge + "Years old.");
+
 
 
