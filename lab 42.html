@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Get Input Value</title>
+</head>
+<body>
+  <label for="username">Enter Username:</label>
+  <input type="text" id="username" placeholder="Type here">
+  <button onclick="displayValue()">Submit</button>
+  <p id="output"></p>
+
+  <script>
+    function displayValue() {
+      let username = document.getElementById("username").value;
+      document.getElementById("output").innerText = "Entered Username: " + username;
+    }
+  </script>
+</body>
+</html>
+
+// lab2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Empty Field Validation</title>
+</head>
+<body>
+  <form onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter name">
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter email">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+
+      if (name.trim() === "" || email.trim() === "") {
+        alert("All fields must be filled!");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>
+
+// lab 3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Email Validation</title>
+</head>
+<body>
+  <form onsubmit="return validateEmail()">
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter email">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateEmail() {
+      let email = document.getElementById("email").value;
+      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailPattern.test(email)) {
+        alert("Invalid email format!");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>
+
+
+// lab 4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Number Validation</title>
+</head>
+<body>
+  <form onsubmit="return validateNumber()">
+    <label for="age">Enter Age:</label>
+    <input type="text" id="age" placeholder="Enter age">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateNumber() {
+      let age = document.getElementById("age").value;
+
+      if (isNaN(age) || age.trim() === "") {
+        alert("Please enter a valid number!");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>
+
+
+// lab 5
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Form Validation</title>
+</head>
+<body>
+  <form id="userForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter name">
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter email">
+    <label for="age">Age:</label>
+    <input type="text" id="age" placeholder="Enter age">
+    <button type="submit">Submit</button>
+  </form>
+  <p id="result"></p>
+
+  <script>
+    document.getElementById("userForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let age = document.getElementById("age").value;
+
+      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (name.trim() === "" || email.trim() === "" || age.trim() === "") {
+        alert("All fields are required!");
+        return;
+      }
+
+      if (!emailPattern.test(email)) {
+        alert("Invalid email format!");
+        return;
+      }
+
+      if (isNaN(age)) {
+        alert("Age must be a number!");
+        return;
+      }
+
+      document.getElementById("result").innerText = "Form submitted successfully!";
+    });
+  </script>
+</body>
+</html>
+
+

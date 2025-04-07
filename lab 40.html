@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Change Text Example</title>
+</head>
+<body>
+  <p id="message">This is the original text.</p>
+  <button onclick="changeText()">Change Text</button>
+
+  <script>
+    function changeText() {
+      let element = document.getElementById("message");
+      element.innerText = "The text has been changed!";
+    }
+  </script>
+</body>
+</html>
+
+
+// lab 2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Change Background Color</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightgray;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <button onclick="changeColor()">Change Color</button>
+
+  <script>
+    function changeColor() {
+      let box = document.querySelector(".box");
+      box.style.backgroundColor = "blue";
+    }
+  </script>
+</body>
+</html>
+
+// lab 3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Change HTML Content</title>
+</head>
+<body>
+  <div id="content">Click the button to change this text.</div>
+  <button onclick="changeContent()">Change Content</button>
+
+  <script>
+    function changeContent() {
+      let element = document.getElementById("content");
+      element.innerHTML = "<h2>New Content Added!</h2>";
+    }
+  </script>
+</body>
+</html>
+
+// lab 4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Change Image</title>
+</head>
+<body>
+  <img id="image" src="default.jpg" width="200">
+  <button onclick="changeImage()">Change Image</button>
+
+  <script>
+    function changeImage() {
+      let img = document.getElementById("image");
+      img.setAttribute("src", "new-image.jpg");
+    }
+  </script>
+</body>
+</html>
+
+
+//lab5
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add List Item</title>
+</head>
+<body>
+  <ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+  <button onclick="addItem()">Add Item</button>
+
+  <script>
+    function addItem() {
+      let newItem = document.createElement("li");
+      newItem.innerText = "New Item";
+      document.getElementById("list").appendChild(newItem);
+    }
+  </script>
+</body>
+</html>
+
