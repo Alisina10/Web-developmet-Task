@@ -1,19 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Get Input Value</title>
+  <title>Change Style</title>
 </head>
 <body>
-  <label for="username">Enter Username:</label>
-  <input type="text" id="username" placeholder="Type here">
-  <button onclick="displayValue()">Submit</button>
-  <p id="output"></p>
+  <p id="text">Click the button to change my style!</p>
+  <button id="changeStyle">Change Style</button>
 
   <script>
-    function displayValue() {
-      let username = document.getElementById("username").value;
-      document.getElementById("output").innerText = "Entered Username: " + username;
+    let button = document.getElementById("changeStyle");
+    let text = document.getElementById("text");
+
+    button.onclick = function() {
+      text.style.color = "white";
+      text.style.backgroundColor = "black";
+      text.style.fontSize = "24px";
+    };
+  </script>
+</body>
+</html>
+
+// lab 2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .highlight {
+      color: white;
+      background-color: blue;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
     }
+  </style>
+  <title>Toggle Class</title>
+</head>
+<body>
+  <p id="text">Click the button to highlight me!</p>
+  <button id="toggleclass">Toggle Highlight</button>
+
+  <script>
+    let button = document.getElementById("toggleclass");
+    let text = document.getElementById("text");
+
+    button.onclick = function() {
+      text.classList.toggle("highlight");
+    };
+  </script>
+</body>
+</html>
+
+// lab 3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fade Out Effect</title>
+</head>
+<body>
+  <p id="fadeText">This text will fade out.</p>
+  <button id="fadeButton">Fade Out</button>
+
+  <script>
+    let button = document.getElementById("fadeButton");
+    let text = document.getElementById("fadeText");
+
+    button.onclick = function() {
+      let opacity = 1;
+      function fade() {
+        if (opacity > 0) {
+          opacity -= 0.1;
+          text.style.opacity = opacity;
+          setTimeout(fade, 100);
+        }
+      }
+      fade();
+    };
+  </script>
+</body>
+</html>
+
+
+
+// lab 4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    #box {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: absolute;
+      top: 100px;
+    }
+  </style>
+  <title>Moving Box</title>
+</head>
+<body>
+  <div id="box"></div>
+  <button id="moveButton">Move Right</button>
+
+  <script>
+    let box = document.getElementById("box");
+    let button = document.getElementById("moveButton");
+    let position = 0;
+
+    button.onclick = function() {
+      let interval = setInterval(() => {
+        if (position < 300) {
+          position += 5;
+          box.style.left = position + "px";
+        } else {
+          clearInterval(interval);
+        }
+      }, 50);
+    };
+  </script>
+</body>
+</html>
+
+
+// lab 5
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Blinking Text</title>
+</head>
+<body>
+  <p id="blinkText">This text will blink.</p>
+
+  <script>
+    let text = document.getElementById("blinkText");
+
+    setInterval(() => {
+      text.style.color = text.style.color === "red" ? "blue" : "red";
+    }, 1000);
   </script>
 </body>
 </html>
